@@ -40,10 +40,10 @@ if [ -e ./config.ini ]; then
   # crontab
   echo -e "\n"
   
-  read -p "Append cronfile with speedtest-monitoring every hour and dns servers latency monitoring every minute? (y/n): " cron_append
+  read -p "Append cronfile with speedtest-monitoring every hour and dns servers latency monitoring every minute? WARNING - you need to be in project's root folder! (y/n): " cron_append
   if [[ $cron_append == y ]] ; then 
-    (crontab -l ; echo "0 * * * * . `pwd`/.env `pwd`/worker/speedmon.sh")| crontab -
-    (crontab -l ; echo "* * * * * . `pwd`/.env `pwd`/worker/pingmon.sh")| crontab -
+    (crontab -l ; echo "0 * * * * cd `pwd`; `pwd`/worker/speedmon.sh")| crontab -
+    (crontab -l ; echo "* * * * * cd `pwd`; `pwd`/worker/pingmon.sh")| crontab -
   fi
 
 else

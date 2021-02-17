@@ -1,7 +1,7 @@
 # wan-monitor-host
 WAN monitoring service with speedtest/ping done directly on host 
 
-![]()
+![](https://i.imgur.com/fbSUBcq.png)
 
 ### How to get started:
 1. Install or compile speedtest-cli https://github.com/sivel/speedtest-cli
@@ -38,6 +38,7 @@ sleep 30
 - curl 7.75.0
 - ping from iputils s20200821
 - speedtest-cli 2.1.2
+- cronie 1.5.5
 
 
 #### Based on images:
