@@ -35,7 +35,7 @@ if [ -e ./config.ini ]; then
 
   # Make Pingmon & Speedmon runnable
 
-  chmod +x ./worker/pingmon.sh ./worker/speedmon.sh
+  chmod +x ./setup-grafana.sh ./worker/pingmon.sh ./worker/speedmon.sh
 
   # crontab
   echo -e "\n"

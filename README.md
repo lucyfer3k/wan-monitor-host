@@ -19,7 +19,7 @@ WAN monitoring service with speedtest/ping done directly on host
 git clone https://github.com/sivel/speedtest-cli.git
 cd speedtest-cli
 python setup.py install
-./setup-env.sh
+bash setup-env.sh
 sudo docker-compose up -d
 sleep 30
 ./setup-grafana.sh
