@@ -33,7 +33,7 @@ if [ -e ./config.ini ]; then
   echo "DNS_NAME_3=$pm_dns_name_3" | tee -a ./.env
   echo "DNS_IP_3=$pm_dns_ip_3" | tee -a ./.env
 
-  # Make Pingmon & Speedmon runnable
+  # Make Grafana setup, Pingmon & Speedmon runnable
 
   chmod +x ./setup-grafana.sh ./worker/pingmon.sh ./worker/speedmon.sh
 
