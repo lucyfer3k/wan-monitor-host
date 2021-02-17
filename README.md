@@ -4,8 +4,9 @@ WAN monitoring service with speedtest/ping done directly on host
 ![]()
 
 ### How to get started:
-1. Configurate your environment within `config.ini`
-2. Setup environmental variables `./setup-env.sh`
+1. Install or compile speedtest-cli https://github.com/sivel/speedtest-cli
+1. Configure your environment within `config.ini`
+2. Setup environmental variables & cron `./setup-env.sh`
 3. Start your containers `sudo docker-compose up -d`
 4. After Grafana is up run `./setup-grafana.sh`
 5. Go to http://localhost:8080 and login to Grafana using your username & password (default admin:password123)
@@ -15,6 +16,9 @@ WAN monitoring service with speedtest/ping done directly on host
 
 ### Quick start:
 ```
+git clone https://github.com/sivel/speedtest-cli.git
+cd speedtest-cli
+python setup.py install
 ./setup-env.sh
 sudo docker-compose up -d
 sleep 30
@@ -36,7 +40,6 @@ sleep 30
 
 
 #### Based on images:
-- ubuntu:latest
 - grafana/grafana:latest
 - quay.io/influxdb/influxdb:2.0.4
 - nginx:alpine
@@ -45,5 +48,3 @@ sleep 30
 #### This project was first based on these blog posts:
 - https://nbailey.ca/post/wan-speedtest-elasticsearch/
 - https://nbailey.ca/post/wan-ping-monitor-influxdb/
-
-#### TODO:
