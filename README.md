@@ -6,7 +6,7 @@ WAN monitoring service with speedtest/ping done directly on host
 ### How to get started:
 1. Install or compile speedtest-cli https://github.com/sivel/speedtest-cli
 1. Configure your environment within `config.ini`
-2. Setup environmental variables & cron `./setup-env.sh`
+2. Setup environmental variables & cron `bash setup-env.sh`
 3. Start your containers `sudo docker-compose up -d`
 4. After Grafana is up run `./setup-grafana.sh`
 5. Go to http://localhost:8080 and login to Grafana using your username & password (default admin:password123)
@@ -19,6 +19,7 @@ WAN monitoring service with speedtest/ping done directly on host
 git clone https://github.com/sivel/speedtest-cli.git
 cd speedtest-cli
 python setup.py install
+cd ..
 bash setup-env.sh
 sudo docker-compose up -d
 sleep 30
