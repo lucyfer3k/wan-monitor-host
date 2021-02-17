@@ -1,6 +1,9 @@
 # wan-monitor-host
 WAN monitoring service with speedtest/ping done directly on host 
 
+![Alternative build with dockerized worker](https://github.com/lucyfer3k/wan-monitor-worker)
+
+### Solution architecture diagram
 ![](https://i.imgur.com/fbSUBcq.png)
 
 ### How to get started:
