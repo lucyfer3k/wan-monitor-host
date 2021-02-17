@@ -1,0 +1,35 @@
+services:
+  grafana:
+    image: grafana/grafana:7.3.7
+    expose:
+      - "3000"
+    env_file:
+      - ./.env
+    volumes:
+      - grafana-storage:/var/lib/grafana
+    restart: unless-stopped
+
+  nginx:
+    build:
+      context: ./nginx
+    ports:
+      - 8080:8080
+      - 8081:8081
+    restart: unless-stopped
+
+  influxdb:
+    build:
+      context: ./influxdb
+    expose:
+      - "8086"
+    env_file:
+      - ./.env
+    volumes:
+      - influxdb-storage:/var/lib/influxdb2
+    restart: unless-stopped
+  
+volumes:
+  grafana-storage:
+    driver: local
+  influxdb-storage:
+    driver: local
