@@ -20,6 +20,9 @@ git clone https://github.com/sivel/speedtest-cli.git
 cd speedtest-cli
 python setup.py install
 cd ..
+
+git clone https://github.com/lucyfer3k/wan-monitor-host.git
+cd wan-monitor-host
 bash setup-env.sh
 sudo docker-compose up -d
 sleep 30
