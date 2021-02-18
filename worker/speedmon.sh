@@ -6,6 +6,8 @@ set -eo pipefail
 
 . ./.env
 
+sleep 10
+
 echo $(speedtest-cli --csv) > ./speedtest_last_result.csv
 
 Download=$(cat ./speedtest_last_result.csv | cut -d ',' -f7)
